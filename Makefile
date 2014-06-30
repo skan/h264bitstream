@@ -17,7 +17,7 @@ all: libh264bitstream.a h264_analyze
 
 
 h264_analyze: h264_analyze.o libh264bitstream.a
-	$(LD) $(LDFLAGS) -o h264_analyze h264_analyze.o -L. -lm -lh264bitstream
+	$(LD) $(LDFLAGS) -o h264_analyze h264_analyze.o -L. -lh264bitstream -lm
 
 
 libh264bitstream.a: h264_stream.c h264_stream.h h264_sei.c h264_sei.h bs.c bs.h
